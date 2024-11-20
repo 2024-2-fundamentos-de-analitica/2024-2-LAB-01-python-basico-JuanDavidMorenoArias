@@ -16,3 +16,23 @@ def pregunta_11():
 
 
     """
+    with open('files\\input\\data.csv','r') as file:
+            # Creacion de un diccionario para los resultados
+            sumas = {}
+            # Se itera linea por linea del archivo
+            for line in file:
+                # se separa los elementos de la linea por espacio
+                linea_extraida = line.split()
+                # se extrael el quinto elemento, los codigos
+                letras = linea_extraida[3].split(',')
+
+                numero = int(linea_extraida[1])
+
+                for letra in letras:
+                    if letra not in sumas:
+                          sumas[letra] = 0
+                    sumas[letra] += numero
+            # Se ordena el diccionario por orden de los items 
+            sorted_dict = dict(sorted(sumas.items()))    
+
+            return sorted_dict

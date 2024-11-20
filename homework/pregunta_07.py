@@ -25,3 +25,31 @@ def pregunta_07():
      (9, ['A', 'B', 'E', 'A', 'A', 'C'])]
 
     """
+
+    # Abre el archivo .csv en modo lectura
+    with open('files\\input\\data.csv','r') as file:
+        # Creacion de un diccionario para los resultados
+        results = {}
+        # Se itera linea por linea del archivo
+        for line in file:
+            # se separa los elementos de la linea por espacio
+            linea_extraida = line.split()
+            # se extrae la letra, el primer elemento de la linea
+            letra = linea_extraida[0]
+            # se extrae el numero, el segundo elemento de la linea
+            numero = linea_extraida[1]
+            # se convierte el numero hecho string a entero
+            numero = int(numero)
+
+            # Se agregan los elementos al diccionario con su lista que contiene las letras asociadas
+            if numero not in results:
+                results[numero] = list()
+            results[numero] += letra
+
+            # Se ordena el diccionario por orden de las claves (numeros)
+            sorted_dict = dict(sorted(results.items()))
+            
+        return list(sorted(sorted_dict.items()))
+    
+
+
