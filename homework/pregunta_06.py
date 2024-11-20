@@ -26,7 +26,7 @@ def pregunta_06():
      ('jjj', 5, 17)]
 
     """
-    with open('files\\input\\data.csv','r') as file:
+    with open('files/input/data.csv','r') as file:
         # Creacion de un diccionario para los resultados
         maximos = {}
         minimos = {}

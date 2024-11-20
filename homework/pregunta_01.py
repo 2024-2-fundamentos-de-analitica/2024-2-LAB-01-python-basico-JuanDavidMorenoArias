@@ -17,7 +17,7 @@ def pregunta_01():
     # creacion un contador para la suma
     sum = 0
     # Abre el archivo .csv en modo lectura
-    with open('files\\input\\data.csv','r') as file:
+    with open('files/input/data.csv','r') as file:
         # itera linea por linea
         for line in file:
             # se separa las lineas por espacios

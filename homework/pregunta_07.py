@@ -27,7 +27,7 @@ def pregunta_07():
     """
 
     # Abre el archivo .csv en modo lectura
-    with open('files\\input\\data.csv','r') as file:
+    with open('files/input/data.csv','r') as file:
         # Creacion de un diccionario para los resultados
         results = {}
         # Se itera linea por linea del archivo
